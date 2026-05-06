@@ -65,72 +65,48 @@ The dataset was created using images from the Kaggle dataset and additional manu
 
 1. Detect pose keypoints using MediaPipe Pose
 2. Extract normalized landmark coordinates
-3. Compute angle-based features
+3. Compute angle based features
 4. Train machine learning classifier
 5. Predict yoga pose
 6. Validate Surya Namaskar sequence
-7. Provide form-correction feedback
+7. Provide form correction feedback
 
 ---
 
 ## Model
 
-The project experiments with:
-- Multi-Layer Perceptron (MLP)
-- Random Forest Classifier
+The system uses a Multi Layer Perceptron (MLP) based machine learning approach for yoga pose classification. MediaPipe Pose is used to extract pose keypoints from the human body, after which normalized landmark coordinates and angle based geometric features are computed and used for pose prediction.
 
-Random Forest provided more stable predictions and better performance.
+The predicted pose is further used for sequence tracking, repetition counting, wrong-pose detection, and form-correction feedback.
 
 ---
 
 ## Form Correction
 
-The system performs rule-based form checks for different poses using:
+The system performs rule based form checks for different poses and gives feed back using following
 - Knee angles
 - Elbow angles
 - Hip position
 - Body alignment
 
-Example feedback:
-- Keep knees straight
-- Lift chest upward
-- Raise hips higher
-
 ---
 
-## Project Structure
 
-```text
-project/
-│
-├── dataset/
-├── pose_model.pkl
-├── label_encoder.pkl
-├── training.ipynb
-├── sequence_engine.ipynb
-├── webcam_demo.ipynb
-├── README.md
-```
 ## Install Dependencies
 
 ```bash
-pip install mediapipe opencv-python scikit-learn numpy
+!pip install mediapipe==0.10.20 protobuf==4.25.3
 ```
 
 
 
 ## Run Training
 
-Run the training notebook/script to:
+Run the training notebook to:
 
 - extract pose keypoints
 - generate normalized features
 - train the classifier
-- save the trained model
-
-Generated files:
-- `pose_model.pkl`
-- `label_encoder.pkl`
 
 ---
 
@@ -146,29 +122,21 @@ Run the sequence detection notebook/script to:
 
 The system supports:
 - uploaded image testing
-- webcam-based interaction
+- webcam based interaction
 
 ---
 
 ## Results
 
-The system successfully:
-- detects Surya Namaskar poses
-- tracks sequence progression
-- counts repetitions
-- provides posture correction feedback
-- detects incorrect pose order
-
-Normalized pose keypoints and angle-based features significantly improved prediction stability and accuracy.
+The developed system can detect Surya Namaskar poses, track sequence progression, count repetitions, identify incorrect pose order, and provide basic posture correction feedback. The use of normalized pose keypoints and angle based geometric features improved the prediction stability and pose recognition performance.
 
 ---
 
 ## Limitations
 
 - Similar poses may occasionally be confused
-- Requires proper lighting and full-body visibility
+- Requires proper lighting and full body visibility
 - Webcam support inside Google Colab is limited
-- Form correction rules are manually designed
 
 ---
 
@@ -176,16 +144,11 @@ Normalized pose keypoints and angle-based features significantly improved predic
 
 Possible future improvements include:
 
-- Real-time deployment using Streamlit
-- Voice-based yoga guidance
-- Pose confidence scoring
+- Real time deployment using Streamlit
+- Voice based yoga guidance
 - Mobile application support
 - Deep learning based sequence models
 
----
 
-## Team Members
 
-- Keerthi Seela — 2023102012  
-- Anumula Venkata Sai Sree Sahithi — 2023112002  
-- Aditi Bose — 2023811005
+
