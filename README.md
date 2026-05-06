@@ -112,3 +112,82 @@ project/
 ├── sequence_engine.ipynb
 ├── webcam_demo.ipynb
 ├── README.md
+```
+## Install Dependencies
+
+```bash
+pip install mediapipe opencv-python scikit-learn numpy
+```
+
+
+
+## Run Training
+
+Run the training notebook/script to:
+
+- extract pose keypoints
+- generate normalized features
+- train the classifier
+- save the trained model
+
+Generated files:
+- `pose_model.pkl`
+- `label_encoder.pkl`
+
+---
+
+## Run Sequence Detection
+
+Run the sequence detection notebook/script to:
+
+- predict Surya Namaskar poses
+- validate sequence order
+- count repetitions
+- detect incorrect poses
+- provide form correction feedback
+
+The system supports:
+- uploaded image testing
+- webcam-based interaction
+
+---
+
+## Results
+
+The system successfully:
+- detects Surya Namaskar poses
+- tracks sequence progression
+- counts repetitions
+- provides posture correction feedback
+- detects incorrect pose order
+
+Normalized pose keypoints and angle-based features significantly improved prediction stability and accuracy.
+
+---
+
+## Limitations
+
+- Similar poses may occasionally be confused
+- Requires proper lighting and full-body visibility
+- Webcam support inside Google Colab is limited
+- Form correction rules are manually designed
+
+---
+
+## Future Work
+
+Possible future improvements include:
+
+- Real-time deployment using Streamlit
+- Voice-based yoga guidance
+- Pose confidence scoring
+- Mobile application support
+- Deep learning based sequence models
+
+---
+
+## Team Members
+
+- Keerthi Seela — 2023102012  
+- Anumula Venkata Sai Sree Sahithi — 2023112002  
+- Aditi Bose — 2023811005
