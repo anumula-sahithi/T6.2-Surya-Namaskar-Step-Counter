@@ -80,7 +80,33 @@ The system uses a Multi Layer Perceptron (MLP) based machine learning approach f
 The predicted pose is further used for sequence tracking, repetition counting, wrong-pose detection, and form-correction feedback.
 
 ---
+## Pose Detection
 
+The system performs yoga pose detection using MediaPipe Pose estimation and machine learning based classification.
+
+The pose detection pipeline includes
+- Extraction of pose keypoints
+- Landmark normalization
+- Angle based feature computation
+- Yoga pose prediction
+
+The system is capable of recognizing Surya Namaskar related yoga poses from uploaded images and webcam input.
+
+---
+
+## Sequence Detection
+
+The system validates the order of Surya Namaskar poses using a sequence tracking engine.
+
+The sequence detection module performs:
+- Step by step pose validation
+- Repetition counting
+- Incorrect pose order detection
+- Next pose guidance
+
+It tracks the complete 12 step Surya Namaskar flow while handling repeated poses and prediction noise.
+
+---
 ## Form Correction
 
 The system performs rule based form checks for different poses and gives feed back using following
