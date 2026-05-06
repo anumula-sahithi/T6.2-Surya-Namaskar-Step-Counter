@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a computer vision and machine learning based yoga assistant for Surya Namaskar. The system detects yoga poses, validates the sequence of steps, counts repetitions, and provides basic form-correction feedback.
+This project is a computer vision and machine learning based yoga assistant for Surya Namaskar. The system detects yoga poses, checks the sequence of steps, counts repetitions, and provides basic form correction feedback.
 
 The project uses MediaPipe Pose for human pose estimation and machine learning classifiers for pose recognition.
 
@@ -11,13 +11,12 @@ The project uses MediaPipe Pose for human pose estimation and machine learning c
 ## Features
 
 - Surya Namaskar pose detection
-- 12-step sequence tracking
+- 12 step sequence tracking
 - Repetition counting
 - Wrong pose detection
 - Form correctness feedback
-- Webcam and image-based testing support
-- MediaPipe based pose keypoint extraction
-- Machine learning based pose classification
+- Webcam and image based testing support
+
 
 ---
 
@@ -27,14 +26,14 @@ The complete Surya Namaskar cycle contains 12 steps:
 
 1. Pranamasana
 2. Hasta Uttanasana
-3. Padahastasana
-4. Ashwa Sanchalanasana
+3. Padahastasana or Uttanasana
+4. Ashwa Sanchalanasana or Anjaneyasana
 5. Chaturanga Dandasana
 6. Ashtanga Namaskara
 7. Bhujangasana
 8. Adho Mukha Svanasana
-9. Ashwa Sanchalanasana
-10. Padahastasana
+9. Ashwa Sanchalanasana or Anjaneyasana
+10. Padahastasana or Uttanasana
 11. Hasta Uttanasana
 12. Pranamasana
 
@@ -44,11 +43,10 @@ Although the sequence contains 12 steps, there are 8 distinct poses.
 
 ## Dataset
 
-The dataset was created using:
-- Images from the Kaggle Yoga Pose Classification Dataset by Shruti Saxena
-- Additional manually collected images
+The dataset was created using images from the Kaggle dataset and additional manually collected images
 
-The original Kaggle dataset contains 47 yoga poses. A subset of Surya Namaskar related poses was selected for this project.
+
+[Google Drive Dataset](https://1drv.ms/f/c/1b8257c358f1efa1/IgAowFBipBqhRbbFDpyua8qBAWuquUvxYPi9PVtYqp5Z_-k?e=EoCSSI)
 
 ---
 
